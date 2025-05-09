@@ -1,0 +1,24 @@
+Steps to run docker app:
+
+pipenv install -r requirements.txt
+
+pipenv lock
+
+
+docker build -t flask-predict-app .
+
+pip install pipenv  (Creates Pipfile and Pipfile.lock)
+(Run this step )
+
+docker run -p 5002:5002 flask-predict-app
+
+Verify that the Flask app is running by accessing http://localhost:5000 from your browser or using a tool like Postman
+
+
+pipenv lock (reacreate pipfile.lock if outdated)
+
+Local test:
+
+pipenv shell
+
+ 
